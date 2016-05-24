@@ -1,0 +1,39 @@
+Philbert's problem:
+
+Create custom class to represent a 3-page sequence
+class ThreePager implements Compable { 
+String pageSequence; // concatenation of three sequential pages
+double elapsedTime; // diff( page3 - page1)
+String hash // hash representation of names in the pageSequence
+// implement method to allow comparison by elapsedTime and by hashcode
+// implement override for hash that uses the pageSequence value as input
+// implement override for toString that returns the pageSequence
+}
+
+Iterate through the file and create a ThreePager object for each group of three pages visited
+
+Place objects into a List
+
+sort List by elapsed time -> get max(elapsedTime)
+
+iterate List and put into Map to keep track of frequency with which each hashcode appears
+
+private static void incrementValue(Map counters, String toAdd) {
+    Integer currValue = (Integer) counters.get(toAdd);
+    if (currValue == null)
+        counters.put(toAdd, 1);
+    else
+        counters.put(toAdd, currValue+1);
+}
+
+
+get Entry set 
+
+iterate through Entry set and find Entry having max value
+
+match that hashcode with List object that has the same Hashcode
+
+
+
+
+

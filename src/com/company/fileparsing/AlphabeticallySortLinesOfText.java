@@ -39,8 +39,12 @@ public class AlphabeticallySortLinesOfText {
 
         FileWriter fileWriter = new FileWriter((outputFile));
         PrintWriter out = new PrintWriter(fileWriter);
+        int linesInFile = sortedList.size();
+        System.out.println("Program to sort lines from a text file by userId and pageId");
+        System.out.println( "Lines in this file = " + linesInFile);
+        System.out.println("*******************");
         for (String outputLine : sortedList) {
-            out.println(outputLine);
+            System.out.println(outputLine);
         }
         out.flush();
         out.close();

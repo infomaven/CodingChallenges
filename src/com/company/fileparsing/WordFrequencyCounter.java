@@ -20,10 +20,11 @@ import java.util.Map;
  Add Strings to the List<String> and you return it
  Another most read: Find more information on equals() and hashcode()
  */
-public class LogFileAnalyzer {
+public class WordFrequencyCounter {
 
 
     public static void main(String[] args) throws FileNotFoundException {
+
 
     }
 
