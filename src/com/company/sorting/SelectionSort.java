@@ -7,14 +7,15 @@ import java.util.Iterator;
 
 /**
  * Created by nadine on 5/23/16.
- * This algo changes relative order of elements that have equal keys. This makes it Unstable
+ * This algo changes relative order of elements that have equal keys. This makes it "Unstable"
  * Worst case  = O(n^2)
  * Best for small number of elements (< 1000), or if aux memory is limited
  * Divides input list into two parts - sublist of sorted items & sublist of unsorted items.
  * Iterates through the unsorted portion of list to find smallest value which is placed into the sorted list.
  * Each time a min value is found, it gets moved from unsorted subList to far right of the sorted subList
  * This causes start index of the unsorted list to increment while the end index stays steady.
- */
+* https://en.wikipedia.org/wiki/Selection_sort
+ **/
 public class SelectionSort {
 
     private static void swap( int[] a, int i , int j) {
@@ -48,7 +49,6 @@ public static int[] selectionSort( int[] list) {
         String list = "";
         int i = 0, n = 0;
 
-        SelectionSort s = new SelectionSort();
         ArrayList<Integer> arrList = new ArrayList<Integer>();
         System.out.println(" ");
         System.out.println(" ");
