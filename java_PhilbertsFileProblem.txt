@@ -1,16 +1,33 @@
 Philbert's problem:
 
-Create custom class to represent a 3-page sequence
-class ThreePager implements Compable { 
-String pageSequence; // concatenation of three sequential pages
-double elapsedTime; // diff( page3 - page1)
-String hash // hash representation of names in the pageSequence
-// implement method to allow comparison by elapsedTime and by hashcode
-// implement override for hash that uses the pageSequence value as input
-// implement override for toString that returns the pageSequence
-}
+Create custom class to represent a 3-page pattern with elapsed time & frequency for each
+- aggregate the elapsed time for that 3-page-pattern
+- keep track of how many times that pattern occurs in the file
 
-Iterate through the file and create a ThreePager object for each group of three pages visited
+
+
+SAMPLE
+ex.
+2015-02-02 12:02:36	user10	/product/47	0.103s
+2015-02-02 12:02:36	user23	/product/35	0.697s
+2015-02-02 12:02:36	user05	/product/06	0.574s
+2015-02-02 12:02:36	user23	/product/17	0.197s
+2015-02-02 12:02:38	user36	/product/20	0.187s
+
+Remove Date and user columns
+Index lines in the file, starting with 0
+Advance 3 lines into file -> indexes 0, 1, 2. concatenate pagePaths, aggregate elapsed times, increment counter for that pattern
+ex. /product/47/product/35/product/06, 0.103 + 0.697 + 0.574,  count0
+
+Retreat to index 1. Visit indexes 2, 3. concatenate pagePaths, aggregate elapsed times, increment counter for that pattern
+ex. /product/35/product/06/product/17, 0.697 + 0.574 + 0.197,  count1
+
+Keep doing as long as there are enough lines to form a 3-page pattern
+??? How to handle stray lines that are not enough to form a pattern?
+
+- Need ability to store pattern or concatenated productPaths alongside of frequency count
+- Need ability to keep track of max elapsed time. Perhaps set this at beginning of the program and compare each new pattern's time to the original
+- Need ability to quickly find pattern that occurs most frequently
 
 Place objects into a List
 
@@ -34,6 +51,15 @@ iterate through Entry set and find Entry having max value
 match that hashcode with List object that has the same Hashcode
 
 
+=======
 
+class ThreePager implements Comparble {
+String pageSequence; // concatenation of three sequential pages
+double elapsedTime; // diff( page3 - page1)
+String hash // hash representation of names in the pageSequence
+// implement method to allow comparison by elapsedTime and by hashcode
+// implement override for hash that uses the pageSequence value as input
+// implement override for toString that returns the pageSequence
+}
 
 

@@ -3,7 +3,7 @@ package com.company.timecomplexity;
 /**
  * Created by nadine on 4/9/16.
  */
-public class TimeComplexity {
+public class FrogJump {
 /// https://codility.com/programmers/task/frog_jmp/
     /// 22% score (Correctness poor, performance poorer)
     public static int frogJump1(int X, int Y, int D) {
