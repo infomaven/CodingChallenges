@@ -3,9 +3,10 @@ package com.company.datastructures;
 /**
  * Created by nadine on 5/26/16.
  * FIFO - First in First Out
+ * 1. insert to the array
  *
  */
-public class QueueWithCircularWrites {
+public class Queue_UsingArray {
 
     private int maxSize; /// initializes with set number
     private long[] queueArray; /// slots to store the data
@@ -14,7 +15,7 @@ public class QueueWithCircularWrites {
     private int nItems; /// number of items in queue
 
     public static void main( String[] args) {
-        QueueWithCircularWrites myQ = new QueueWithCircularWrites(5);
+        Queue_UsingArray myQ = new Queue_UsingArray(5);
         myQ.insert(100);
         myQ.insert(1000);
         myQ.insert(14);
@@ -24,7 +25,7 @@ public class QueueWithCircularWrites {
          myQ.view();
     }
 
-    public QueueWithCircularWrites(int size) {
+    public Queue_UsingArray(int size) {
         this.maxSize = size;
         this.queueArray = new long[size];
         front = 0; /// index of first slot in array

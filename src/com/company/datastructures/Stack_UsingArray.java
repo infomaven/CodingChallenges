@@ -8,21 +8,24 @@ package com.company.datastructures;
  */
 
 
-public class Stack {
+public class Stack_UsingArray {
     private int maxSize;
     private long[] stackArray;
     private int top;
 
     public static void main( String[] args) {
 
-        System.out.println( "Please enter the values that will go in the Stack. Final entry should be 'stop': ");
+        System.out.println( "Please enter the values that will go in the Stack. ");
 
-        Stack st = new Stack(3);
+        Stack_UsingArray st = new Stack_UsingArray(5);
         st.push(20);
         st.push(30);
         st.push(10);
         st.push(50);
         st.push(2);
+        long lastIn = st.peek();
+        System.out.println("Last element added = " + lastIn);
+        System.out.println("Now it's time to unload the Stack! THis is a LIFO (last-in-first-out)\n");
 
         while( !st.isEmpty()) {
             long value = st.pop();
@@ -31,7 +34,7 @@ public class Stack {
 
     }
 
-    public Stack( int size) {
+    public Stack_UsingArray(int size) {
         this.maxSize = size;
         this.stackArray = new long[maxSize];
         this.top = -1;

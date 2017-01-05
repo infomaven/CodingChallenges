@@ -5,6 +5,7 @@ package com.company.datastructures;
  *
  * Implement a Stack from scratch (LIFO)
  * A stack can manage tracking of parentheses when parsing code of an algebraic equation
+ * Must have 5 methods implemented - peek(), push(something), pop(), isEmpty(), isFull()
  *
  */
 
