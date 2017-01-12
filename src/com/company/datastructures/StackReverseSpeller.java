@@ -3,7 +3,7 @@ package com.company.datastructures;
 /**
  * Created by nadine on 5/26/16.
  *
- * Implement a Stack from scratch (LIFO)
+ * Implement a StackDIY from scratch (LIFO)
  * A stack can manage tracking of parentheses when parsing code of an algebraic equation
  * Must have 5 methods implemented - peek(), push(something), pop(), isEmpty(), isFull()
  *
@@ -17,7 +17,7 @@ public class StackReverseSpeller {
 
     public static void main( String[] args) {
 
-  System.out.println("Filling Stack with a new word. It will be printed with reverse spelling");
+  System.out.println("Filling StackDIY with a new word. It will be printed with reverse spelling");
         String inputWord = "aardvark";
 
         StackReverseSpeller st = new StackReverseSpeller( inputWord.length());
@@ -26,7 +26,7 @@ public class StackReverseSpeller {
             st.push(inputWord.charAt(i));
             System.out.print(inputWord.charAt(i));
         }
-        System.out.println("Size of the Stack  = " + st.stackArray.length);
+        System.out.println("Size of the StackDIY  = " + st.stackArray.length);
 
 
         System.out.println("\n");
@@ -52,7 +52,7 @@ public class StackReverseSpeller {
             top++;
             stackArray[top] = j;
         } else {
-            System.out.println("Stack is full");
+            System.out.println("StackDIY is full");
         }
     }
 
@@ -63,7 +63,7 @@ public class StackReverseSpeller {
             top--;
             return topValue;
         } else {
-            System.out.println("Stack is empty.");
+            System.out.println("StackDIY is empty.");
             return ' ';
         }
     }
