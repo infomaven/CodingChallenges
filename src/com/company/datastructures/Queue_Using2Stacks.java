@@ -10,6 +10,19 @@ import java.util.Stack;
  * onto a second Stack. THis effectively reverses the order (elements
  */
 public class Queue_Using2Stacks {
+    public static void main(String[] args) {
+        // transform your function through some test cases here
+        // remember: debugging is half the battle!
+        String testInput = "rabbit, sir, please";
+        String testemptyList = "";
+        String testOneWord = "boo";
+        String testSingleCharWords = "the, q, b, f, jumped";
+
+        System.out.println(myFunction(testInput));
+        System.out.println( myFunction(testemptyList));
+        System.out.println( myFunction(testOneWord));
+        System.out.println( myFunction(testSingleCharWords));
+    }
 
     /**
      *
@@ -40,17 +53,5 @@ public class Queue_Using2Stacks {
         return result.trim();
     }
 
-    public static void main(String[] args) {
-        // run your function through some test cases here
-        // remember: debugging is half the battle!
-        String testInput = "rabbit, sir, please";
-        String testemptyList = "";
-        String testOneWord = "boo";
-        String testSingleCharWords = "the, q, b, f, jumped";
 
-        System.out.println(myFunction(testInput));
-        System.out.println( myFunction(testemptyList));
-        System.out.println( myFunction(testOneWord));
-        System.out.println( myFunction(testSingleCharWords));
-}
 }

@@ -4,13 +4,13 @@ import com.company.fileparsing.ReadWithScanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-//// run sorting algorithm
+//// transform sorting algorithm
         // Strings.FirstNonDupeSinglePass();
         //Sorting.minSort();
        // int result = TimeComplexity.frogJump3(10, 85, 30);
        // System.out.println(result);
 
-///// run the Trie
+///// transform the Trie
 //        PrefixTree.TrieNode tree = PrefixTree.createTree();
 //
 //        String[] words = {"an", "ant", "all", "allot", "alloy", "aloe", "are", "ate", "be"};
@@ -27,7 +27,7 @@ public class Main {
 //            System.out.println("The word was NOT found");
 //        }
 
-//// run Log scanner
+//// transform Log scanner
         ReadWithScanner rs = new ReadWithScanner( "testlog.txt");
         rs.processAndPrint();
 
