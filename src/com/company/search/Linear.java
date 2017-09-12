@@ -2,6 +2,12 @@ package com.company.search;
 
 /**
  * Created by nadine on 9/11/17.
+ * Time complexity:
+ * - worst case = O(N)
+ * - best case = O(1)
+ * Simplist search algo
+ * Collection does NOT need to be sorted
+ *
  */
 public class Linear {
 
