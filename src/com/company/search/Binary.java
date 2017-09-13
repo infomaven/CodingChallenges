@@ -4,12 +4,12 @@ package com.company.search;
  * Created by nadine on 5/12/16.
  */
 public class Binary {
-
-    /* Returns either the index of the location in the array,
-  or -1 if the array did not contain the targetValue
- * 1. Input array must be sorted   2. Collection must allow random access (indexing)
- - Worst case performance: O(log n)
- - Best case performance: O(1)
+    /*
+    @about: Returns either the index of the location in the array,or -1 if not found
+ *  1. Input must be sorted   2. Collection must allow random access (indexing) -> Array structure implied
+ - Worst case : O(log n)
+ - Avg case time: O(log n)
+ - Best case : O(1)
   */
     protected static int iterativeBinary(int[] array, int targetValue) {
         int min = 0;
