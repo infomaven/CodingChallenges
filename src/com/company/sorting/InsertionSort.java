@@ -8,7 +8,7 @@ import java.util.Iterator;
 
 /**
  * Created by nadine on 5/24/16.
- * Simple sorting algo
+ * Simple insertion sorting algo
  * Builds final sorted array one item at a time. Less efficient for large n. Worst run time = O(n^2)
  * Does not change relative order of elements having equal keys -> "stable"
  * Uses in-place memory.
@@ -47,19 +47,7 @@ public class InsertionSort {
         return array;
     }
 
-    public static void main(String[] args) throws Exception {
-        int[] array1 = setupArray();
-        System.out.println("Descending order\n");
-        array1 = descInsertionSort(array1);
-        printSortedArray(array1);
-        System.out.println("\n");
-        System.out.println("**********\n");
-        int[] array2 = setupArray();
-        System.out.println("Ascending order\n");
-        array2 = ascInsertionSort(array2);
-        printSortedArray(array2);
 
-    }
 
     private static void printSortedArray(int[] elementList) {
         System.out.println("\n");
@@ -95,5 +83,26 @@ public class InsertionSort {
             System.out.print( elementList[j] + " ");
         }
         return elementList;
+    }
+
+    // =======================================================
+
+
+    public static void main(String[] args) throws Exception {
+
+        int[] array1 = setupArray();
+
+        System.out.println("Descending order\n");
+        array1 = descInsertionSort(array1);
+        printSortedArray(array1);
+
+        System.out.println("\n");
+        System.out.println("**********\n");
+
+        int[] array2 = setupArray();
+        System.out.println("Ascending order\n");
+        array2 = ascInsertionSort(array2);
+        printSortedArray(array2);
+
     }
 }
