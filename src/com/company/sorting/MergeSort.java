@@ -5,6 +5,11 @@ package com.company.sorting;
  * Merge function runs in O(n) time when merging n elements
  * Divide-and-Conquer. Uses more memory.
  * Real work is done during combine step
+ *
+ * Worst case: O(n log n)
+ Avg case: same
+ Best case: same
+ Space Complexity: O(n)
  */
 public class MergeSort {
 
@@ -12,52 +17,42 @@ public class MergeSort {
     private int[] tempArray;
     private int length;
 
-    public static void main( String[] args) {
+    public static void print(int[] array) {
 
-        int [] inputArr = {45, 23, 11, 89, 77, 98, 4, 28, 65, 43};
-        System.out.println("BEFORE> ");
-        for (int i : inputArr) {
-            System.out.print(i);
-            System.out.print(" ");
+        for (int num : array) {
+            System.out.print(num + " ");
         }
 
-        MergeSort ms = new MergeSort();
-        ms.sort( inputArr);
-
-        System.out.println("\n\nAFTER> ");
-        for (int i : inputArr) {
-            System.out.print(i);
-            System.out.print(" ");
-        }
+        System.out.println("");
     }
 
-    private void sort(int[] inputArr) {
+    public void sort(int[] inputArr) {
         this.array = inputArr;
         this.length = inputArr.length;
         this.tempArray = new int[ length ];
-        startMerge(0, length - 1);
+        splitAndOrder(0, length - 1);
 
     }
 
-    private void startMerge( int lowIndex, int highIndex) {
+    public void splitAndOrder(int lowIndex, int highIndex) {
         if (lowIndex < highIndex ){
             int middle = lowIndex + (highIndex - lowIndex) / 2;
             // sort left side of array
-            startMerge( lowIndex,middle );
+            splitAndOrder( lowIndex,middle );
             // sort right side of array
-            startMerge( middle + 1, highIndex);
+            splitAndOrder( middle + 1, highIndex);
             // merge both sides
-            mergeParts( lowIndex, middle, highIndex );
+            combineLeftAndRight( lowIndex, middle, highIndex );
         }
     }
 
-    private void mergeParts( int lowIndex, int middle, int highIndex ) {
+    public void combineLeftAndRight(int lowIndex, int middle, int highIndex ) {
         for (int i = lowIndex; i <= highIndex; i++) {
             tempArray[i] = array[i];
         }
         int i = lowIndex;
         int j = middle + 1;
-        int k = lowIndex;
+        int k = lowIndex;       //todo: verify this is really 'lowIndex' and not 'highIndex'
         while (i <= middle && j <= highIndex) {
             if (tempArray[i] <= tempArray[j]) {
                 array[k] = tempArray[i];
@@ -73,5 +68,19 @@ public class MergeSort {
             k++;
             i++;
         }
+    }
+
+    public static void main( String[] args) {
+
+        System.out.println("MergeSort\n");
+        int [] inputArr = {45, 23, 11, 89, 77, 98, 4, 28, 65, 43};
+        System.out.println("BEFORE> ");
+        print(inputArr);
+
+        MergeSort ms = new MergeSort();
+        ms.sort( inputArr);
+
+        System.out.println("\n\nAFTER> ");
+        print(inputArr);
     }
 }

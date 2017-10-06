@@ -1,5 +1,6 @@
 package com.company.sorting;
 
+
 /**
  * Created by nadine on 9/12/17.
  * Sinking sort. Simple algo.
@@ -13,6 +14,8 @@ package com.company.sorting;
  *
  */
 public class Bubble {
+
+   // System.out.println("BubbleSort\n");
 
 
 }

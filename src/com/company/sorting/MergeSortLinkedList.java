@@ -74,16 +74,16 @@ public class MergeSortLinkedList {
         }
     }
 
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
+        System.out.println("MergeSortLinkedList\n");
         int[] numbers = new int[] {5, 7, 3, 9, 2, 10, 4, 1, 6, 8};
         System.out.println("BEFORE SORTING: ");
         print( numbers );
+
         mergeSort( numbers );
-        System.out.println("AFTER SORTING: ");
 
+        System.out.println("\n\nAFTER SORTING: ");
         print( numbers );
-
     }
 
 }
