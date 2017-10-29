@@ -3,8 +3,9 @@ package com.company.datastructures;
 /**
  * Created by nadine on 5/26/16.
  *
- * Implement a StackDIY from scratch
- * This stack expects Long data types
+ * StackDIY.java
+ * Implement Stack using an Array of long primitives
+ *
  */
 
 
