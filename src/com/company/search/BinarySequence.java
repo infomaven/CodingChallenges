@@ -5,10 +5,12 @@ import java.util.Scanner;
 
 /*
 Searches for sequential pattern of integers in an array
-Performs best when the array is sorted.
-Best:
-Worst:
-Avg:
+Prereqs: Performs best when the array is sorted.
+Best: O(1)
+Worst: O(log n) ??
+Avg: O(log n)  ??
+
+Halving is used as part of the algorithm. This supports log n runtimes.
 
  */
 public class BinarySequence {
