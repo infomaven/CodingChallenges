@@ -3,6 +3,8 @@ package com.company.datastructures;
 Stack that uses an ArrayList for storage. This eliminates the need to resize when the Stack fills up.
 Supports Generic objects rather than a specific data type
 
+Performs best when SEARCH happenS more often than ADD/REMOVE
+
 Since Stack is a LIFO structure (last-in-first-out), it only needs to track value of last-added element (aka 'top')
 
  */
@@ -28,7 +30,6 @@ public class StackArray<T> implements Stack<T> {
             System.out.println("Stack is empty");
             return null;
         }
-        //System.out.format("DEBUG: last index - %s\n ", total);
         T ele = stackGuts.remove(total - 1);
         total--;
 
@@ -46,6 +47,7 @@ public class StackArray<T> implements Stack<T> {
 
     }
 
+    // Overriding toString() makes the code more testable
     @Override
     public String toString() {
 
