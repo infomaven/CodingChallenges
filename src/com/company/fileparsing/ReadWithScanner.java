@@ -102,6 +102,7 @@ public class ReadWithScanner {
 
     //private Map<String, String> pagePaths = new HashMap();
     private TreeMap<String,String> userPaths = new TreeMap<String,String>();
+
     private Path fPath = null;
     private File inputFile = null;
     private static Charset UTF_8;
